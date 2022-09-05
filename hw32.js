@@ -1,8 +1,11 @@
 `use strict`;
 
 (function () {
-    let calculator = {
-        read(a,b) {
+    const calculator = {
+        a: null,
+        b: null,
+
+        read(a, b) {
             this.a = +prompt(`enter arg a`);
             this.b = +prompt(`enter arg b`);
 
@@ -11,7 +14,6 @@
                 throw errorText;
             }
         },
-
         sum() {
             return this.a + this.b;
         },
@@ -21,8 +23,8 @@
     }
 
     calculator.read();
-    console.log((calculator.sum()));
-    console.log((calculator.mult()));
+    console.log(calculator.sum());
+    console.log(calculator.mult());
 })();
 
 /*
